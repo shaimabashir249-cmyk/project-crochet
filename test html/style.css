@@ -1,0 +1,145 @@
+/* تقسيم الصفحة عمودين */
+.cv-flex {
+    display: flex;
+   gap: 60px; 
+   width: 800px     ;
+   margin-top: 30px      ;
+   margin-left: 150px  ;/*زيادة الصندوق يمين*/
+   height: auto  ;
+   padding: 10px    60px   ;
+    border-radius: 25px;
+    background: linear-gradient(to right, #9b4caf, #c37ad9);
+}
+body{
+    padding:0 ;
+    margin: 0;
+
+}
+hr{
+    height: 0;
+    width: 100% ;
+   
+    color: azure ;
+   
+}
+
+/* العمود اليسار */
+.left-col {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile {
+    border-radius: 50%;
+    margin-top: 50px   ;
+}
+
+.left-name {
+    
+    font-size: 20px;
+}
+.left-name:hover{
+    color:white;
+    font-size: 20px  ;
+    animation: name 5s ease-in-out infinite;
+
+}
+@keyframes name{
+    0%,100%{
+        transform: scale(1) rotate(4deg);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+}
+.left-icons {
+    display: flex;
+    flex-direction: row ;
+    gap: 10px;
+}
+
+.left-icons img {
+  
+    background: white;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+/* العمود اليمين */
+.right-col {
+    flex: 1;
+    padding: 10px   30px ;
+    gap: 50px ;
+    background-color: rgba(255, 253, 253, 0.3) ;
+    border-radius: 20px ;
+}
+
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px ;
+    gap: 20px;
+}
+
+
+@media (max-width: 480px) {
+
+    .cv-flex {
+        flex-direction: column; 
+        width: 95%;
+        margin: 10px auto;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .left-col img.profile {
+        width: 110px;
+        height: 110px;
+    }
+
+    .right-col {
+        padding: 15px;
+    }
+
+    h1, h3 {
+        text-align: center;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 10px;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .cv-flex {
+        flex-direction: column; 
+        width: 70%;
+        margin: 20px auto;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .left-col img.profile {
+        width: 130px;
+        height: 130px;
+    }
+
+    .right-col {
+        padding: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 12px;
+        padding: 10px 20px;
+    }
+}
